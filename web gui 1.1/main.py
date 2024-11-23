@@ -18,7 +18,6 @@ def login():
             flash("Введите логин и пароль!", "danger")
             return redirect(url_for("login"))
 
-        # Аутентификация
         auth_url = "https://srv2.tk-map.ru/ServiceJSON/Login"
         auth_params = {
             "UserName": user_login,
@@ -172,6 +171,5 @@ def delete_object():
     return redirect(url_for("menu"))
 
 
-# Запуск приложения
 if __name__ == "__main__":
     app.run(debug=True)
